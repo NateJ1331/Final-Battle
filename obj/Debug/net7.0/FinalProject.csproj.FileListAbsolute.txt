@@ -1,0 +1,15 @@
+C:\Users\natha\Desktop\School\CS210\Final-Battle\bin\Debug\net7.0\FinalProject.exe
+C:\Users\natha\Desktop\School\CS210\Final-Battle\bin\Debug\net7.0\FinalProject.deps.json
+C:\Users\natha\Desktop\School\CS210\Final-Battle\bin\Debug\net7.0\FinalProject.runtimeconfig.json
+C:\Users\natha\Desktop\School\CS210\Final-Battle\bin\Debug\net7.0\FinalProject.dll
+C:\Users\natha\Desktop\School\CS210\Final-Battle\bin\Debug\net7.0\FinalProject.pdb
+C:\Users\natha\Desktop\School\CS210\Final-Battle\obj\Debug\net7.0\FinalProject.csproj.AssemblyReference.cache
+C:\Users\natha\Desktop\School\CS210\Final-Battle\obj\Debug\net7.0\FinalProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\natha\Desktop\School\CS210\Final-Battle\obj\Debug\net7.0\FinalProject.AssemblyInfoInputs.cache
+C:\Users\natha\Desktop\School\CS210\Final-Battle\obj\Debug\net7.0\FinalProject.AssemblyInfo.cs
+C:\Users\natha\Desktop\School\CS210\Final-Battle\obj\Debug\net7.0\FinalProject.csproj.CoreCompileInputs.cache
+C:\Users\natha\Desktop\School\CS210\Final-Battle\obj\Debug\net7.0\FinalProject.dll
+C:\Users\natha\Desktop\School\CS210\Final-Battle\obj\Debug\net7.0\refint\FinalProject.dll
+C:\Users\natha\Desktop\School\CS210\Final-Battle\obj\Debug\net7.0\FinalProject.pdb
+C:\Users\natha\Desktop\School\CS210\Final-Battle\obj\Debug\net7.0\FinalProject.genruntimeconfig.cache
+C:\Users\natha\Desktop\School\CS210\Final-Battle\obj\Debug\net7.0\ref\FinalProject.dll
