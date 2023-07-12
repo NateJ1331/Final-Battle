@@ -1,9 +1,20 @@
 using System;
-
-class Program
+namespace FinalBattle
 {
-    static void Main(string[] args)
+    class Program
     {
-        Console.WriteLine("Hello FinalProject World!");
+        static void Main(string[] args)
+        {
+            Boss boss = new Boss();
+            Player player = new Player();
+            Display display = new Display();
+            Turn turn = new Turn();
+
+            Console.Clear();
+            while(player.Health > 0 && boss.Health >0)
+            {
+                turn.Player(player,boss,display);
+            }
+        }
     }
 }
