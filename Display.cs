@@ -1,7 +1,23 @@
 namespace FinalBattle
 {  
     class Display
-    {  
+    { 
+
+        public void MainMenu()
+        {
+            Console.WriteLine("     =======================");
+            Console.WriteLine("     |                     |");
+            Console.WriteLine("     |    Final Battle     |");
+            Console.WriteLine("     |                     |");
+            Console.WriteLine("     =======================");
+            Console.WriteLine();
+            Console.WriteLine("     1.  Play");
+            Console.WriteLine("     2.  Credits");
+            Console.WriteLine("     3.  Quit");
+            Console.WriteLine();
+            Console.Write("> ");
+
+        }
 
         public void Boss()
         {
@@ -46,6 +62,15 @@ namespace FinalBattle
 
 
             Console.WriteLine("\n\n1.Attack     2.Block     3.Magic\n");
+        }
+
+
+        public void Credits()
+        {
+            Console.Clear();
+            Console.WriteLine("All the coding and making it work: Nate J");
+            Console.WriteLine("Boss Acii art: John VanderZwaag(www.asciiart.eu)");
+            Thread.Sleep(5000);
         }
         
     }

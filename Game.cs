@@ -4,7 +4,7 @@ namespace FinalBattle
     {
         public int _health = 50;
         
-        private bool block;
+        private bool _block;
         abstract public int Attack();
 
         public int Health
@@ -13,6 +13,15 @@ namespace FinalBattle
             set 
             {
                 _health = value;
+            }
+        }
+
+        public bool Block
+        {
+            get {return _block;}
+            set 
+            {
+                _block = value;
             }
         }
 

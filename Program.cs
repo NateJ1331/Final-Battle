@@ -9,11 +9,33 @@ namespace FinalBattle
             Player player = new Player();
             Display display = new Display();
             Turn turn = new Turn();
+            
+            string quit = "no";
 
-            Console.Clear();
-            while(player.Health > 0 && boss.Health >0)
+            while(quit != "yes")
             {
-                turn.Player(player,boss,display);
+                Console.Clear();
+                display.MainMenu();
+                string choice = Console.ReadLine();
+                switch(choice)
+                {
+                    case "1":
+                        while(player.Health > 0 && boss.Health >0)
+                        {
+                            Console.Clear();
+                            turn.Player(player,boss,display);
+                            turn.Boss(player,boss,display);
+                        }
+                    break;
+
+                    case "2":
+                    display.Credits();
+                    break;
+
+                    case "3":
+                    quit = "yes";
+                    break;
+                }
             }
         }
     }
