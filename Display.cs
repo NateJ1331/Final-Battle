@@ -36,15 +36,27 @@ namespace FinalBattle
             Console.WriteLine("               \\   `'  / \\  `'  / \\  `.' / ");                    
             Console.WriteLine("                `.___,'   `.__,'   `.__,'  ");
         }
-        public void Health(int currenthealth)
+        public void Health(int health)
         {
             Console.Write("| ");
-            for(int i = 0; i < currenthealth; i++)
+            for(int i = 0; i < health; i++)
+            {
+                Console.Write("■");
+            }
+            Console.Write(" |");
+            
+        }
+
+        public void Mana(int mana)
+        {
+            Console.Write("  | ");
+            for(int i = 0; i < mana; i++)
             {
                 Console.Write("♦");
             }
 
             Console.Write(" |");
+                
             
         }
 
@@ -56,8 +68,10 @@ namespace FinalBattle
             Console.WriteLine("\n");
             this.Boss();
             Console.WriteLine("\n=========================================================");
-                                
-            Console.WriteLine("\nYour Health: ");
+
+            Console.Write("\nMana: ");
+            this.Mana(player.Mana);                  
+            Console.Write("\nHealth: ");
             this.Health(player.Health);
 
 
