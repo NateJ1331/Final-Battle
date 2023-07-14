@@ -2,7 +2,7 @@ namespace FinalBattle
 {
     class Player:Game
     {
-        private int _mana = 25;
+        private int _mana = 30;
         public int Mana
         {
             get {return _mana;}
@@ -13,7 +13,7 @@ namespace FinalBattle
         }
         override public int Attack()
         {
-            return 0;
+            return 8;
         }
     }
 }

@@ -2,13 +2,17 @@ namespace FinalBattle
 {
     class Turn
     {
-        public void Player(Player player,Boss boss, Display display)
+        public void Player(Player player,Boss boss, Display display,Magic magic)
         {
             display.BattleScreen(boss,player);
 
             string option = Console.ReadLine();
             int choice = Convert.ToInt32(option);
             player.Block = false;
+            
+            if(player.Mana < 30)
+            {player.Mana += 2;}
+
             switch(choice)
             {
                 case 1:
@@ -17,7 +21,7 @@ namespace FinalBattle
                     else
                     {
                         Console.WriteLine("Your attaked was blocked!");
-                        Thread.Sleep(1000);
+                        Thread.Sleep(750);
                     }
                     break;
 
@@ -27,6 +31,7 @@ namespace FinalBattle
                     break;
 
                 case 3:
+                    boss.Health -= magic.CastSpell("Wizard",player);
                     break;
                 }
         }

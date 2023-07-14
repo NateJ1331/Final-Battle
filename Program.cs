@@ -8,7 +8,9 @@ namespace FinalBattle
             Boss boss = new Boss();
             Player player = new Player();
             Display display = new Display();
+            Magic magic = new Magic();
             Turn turn = new Turn();
+            
             
             string quit = "no";
 
@@ -23,7 +25,7 @@ namespace FinalBattle
                         while(player.Health > 0 && boss.Health >0)
                         {
                             Console.Clear();
-                            turn.Player(player,boss,display);
+                            turn.Player(player,boss,display,magic);
                             turn.Boss(player,boss,display);
                         }
                     break;
