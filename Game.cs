@@ -3,7 +3,6 @@ namespace FinalBattle
     abstract class Game
     {
         public int _health = 50;
-        
         private bool _block;
         abstract public int Attack();
 
