@@ -10,7 +10,7 @@ namespace FinalBattle
             int choice = Convert.ToInt32(option);
             player.Block = false;
             
-            if(player.Mana < 30)
+            if(player.Mana < player.ManaTotal)
             {player.Mana += 2;}
 
             switch(choice)
@@ -31,7 +31,7 @@ namespace FinalBattle
                     break;
 
                 case 3:
-                    boss.Health -= magic.CastSpell("Wizard",player);
+                    boss.Health -= magic.CastSpell(player.Class,player);
                     break;
                 }
         }

@@ -19,6 +19,15 @@ namespace FinalBattle
 
         }
 
+        public void ClassMenu()
+        {
+            Console.Clear();
+            Console.WriteLine(" Which Class would you like to play?");
+            Console.WriteLine(" 1. Barbarian");
+            Console.WriteLine(" 2. Paladin");
+            Console.WriteLine(" 3. Wizard");
+        }
+
         public void Boss()
         {
             Console.WriteLine("                      ______________                           ");  
@@ -68,7 +77,7 @@ namespace FinalBattle
             Console.WriteLine("\n");
             this.Boss();
             Console.WriteLine("\n=========================================================");
-
+            Console.WriteLine(player.Class);
             Console.Write("\nMana: ");
             this.Mana(player.Mana);                  
             Console.Write("\nHealth: ");

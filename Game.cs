@@ -2,10 +2,11 @@ namespace FinalBattle
 {
     abstract class Game
     {
-        public int _health = 50;
+        public int _health;
         private bool _block;
         abstract public int Attack();
 
+        
         public int Health
         {
             get {return _health;}
