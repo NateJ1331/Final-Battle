@@ -11,7 +11,7 @@ namespace FinalBattle
             Turn turn = new Turn();
             Player player = new Player();
             
-            boss.Health = 100;
+            boss.Health = 80;
             string quit = "no";
 
             while(quit != "yes")
@@ -50,12 +50,12 @@ namespace FinalBattle
                                 display.WinScreen();
                                 break;
                             }
+                            turn.Boss(player,boss,display,magic);
                             if(player.Health <= 0)
                             {
                                 display.LoseScreen();
                                 break;
                             }
-                            turn.Boss(player,boss,display,magic);
                         }
 
                     break;

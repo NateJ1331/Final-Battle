@@ -3,7 +3,7 @@ namespace FinalBattle
     class Magic
     {
 
-        public int DragonClaw(Player player)
+        public int DragonClaw()
         {
             Console.WriteLine("Dragon Claw!");
             Thread.Sleep(750);
@@ -24,7 +24,7 @@ namespace FinalBattle
                 Console.WriteLine("Fireball!");
                 Thread.Sleep(750);
                 player.Mana -= 13;
-                return 12;
+                return 20;
             }
                
         }

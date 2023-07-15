@@ -55,6 +55,7 @@ namespace FinalBattle
             Random num = new Random();
             int action = num.Next(3);
             boss.Block = false;
+            action += 1;
             switch(action)
             {
                 case 1:
@@ -73,11 +74,11 @@ namespace FinalBattle
 
                 case 3:
                     if(!player.Block)
-                    {player.Health -= magic.DragonClaw(player);}
+                    {player.Health -= magic.DragonClaw();}
                     else
                     {
                         Console.WriteLine("You blocked some of their attack!");
-                        player.Health -= (magic.DragonClaw(player)/2);
+                        player.Health -= (magic.DragonClaw()/2);
                         Thread.Sleep(750);
                     }
 
