@@ -2,9 +2,12 @@ namespace FinalBattle
 {
     class Boss:Game
     {
-        override public int Attack()
+        public int BossAttack()
         {
-            return 5;
+            Random num = new Random();
+            int action = num.Next(8);
+
+            return action + 5;
         }
 
     }

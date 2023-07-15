@@ -45,8 +45,19 @@ namespace FinalBattle
                         {
                             Console.Clear();
                             turn.Player(player,boss,display,magic);
-                            turn.Boss(player,boss,display);
+                            if(boss.Health <= 0)
+                            {
+                                display.WinScreen();
+                                break;
+                            }
+                            if(player.Health <= 0)
+                            {
+                                display.LoseScreen();
+                                break;
+                            }
+                            turn.Boss(player,boss,display,magic);
                         }
+
                     break;
 
                     case "2":

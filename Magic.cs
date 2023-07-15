@@ -3,6 +3,13 @@ namespace FinalBattle
     class Magic
     {
 
+        public int DragonClaw(Player player)
+        {
+            Console.WriteLine("Dragon Claw!");
+            Thread.Sleep(750);
+            return 16;
+        }
+
         public int Fireball(Player player)
         {   
             if(player.Mana < 13)
@@ -14,7 +21,7 @@ namespace FinalBattle
             
             else
             {
-                Console.WriteLine("You cast Fireball!");
+                Console.WriteLine("Fireball!");
                 Thread.Sleep(750);
                 player.Mana -= 13;
                 return 12;
@@ -22,7 +29,7 @@ namespace FinalBattle
                
         }
 
-        public int HolySlash(Player player)
+        public int DivineSmite(Player player)
         {   
             if(player.Mana < 8)
             {
@@ -33,15 +40,15 @@ namespace FinalBattle
             
             else
             {
-                Console.WriteLine("You cast Holy Slash");
+                Console.WriteLine("Divine Smite");
                 Thread.Sleep(750);
-                player.Mana -= 8;
+                player.Mana -= 12;
                 return 8;
             }
                
         }
 
-        public int Rage(Player player)
+        public int RecklessAttack(Player player)
         {   
             if(player.Mana < 10)
             {
@@ -52,10 +59,11 @@ namespace FinalBattle
             
             else
             {
-                Console.WriteLine("SUPER PUNCH!!");
+                Console.WriteLine("You attack Recklessly");
                 Thread.Sleep(750);
-                player.Mana -= 10;
-                return player.Attack() + 5;
+                player.Mana -= 13;
+                player.Health -= 3;
+                return player.Attack*2;
             }
                
         }
@@ -65,13 +73,13 @@ namespace FinalBattle
             switch(player.Class)
             {
                 case "Paladin":
-                    return this.HolySlash(player);
+                    return this.DivineSmite(player);
 
                 case "Wizard":
                     return this.Fireball(player);
                 
                 case "Barbarian":
-                    return this.Rage(player);
+                    return this.RecklessAttack(player);
 
                 default:
                     return 0;

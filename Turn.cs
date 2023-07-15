@@ -10,14 +10,18 @@ namespace FinalBattle
             int choice = Convert.ToInt32(option);
             player.Block = false;
             
-            if(player.Mana < player.ManaTotal)
+            if(player.Mana < 0)
+            {player.Mana = 0;}
+
+            if(player.Mana < player.ManaTotal) 
             {player.Mana += player.ManaRegen;}
+            
 
             switch(choice)
             {
                 case 1:
                     if(!boss.Block)
-                    {boss.Health -= player.Attack();}
+                    {boss.Health -= player.Attack;}
                     else
                     {
                         Console.WriteLine("Your attaked was blocked!");
@@ -31,12 +35,22 @@ namespace FinalBattle
                     break;
 
                 case 3:
-                    boss.Health -= magic.CastSpell(player);
+                    if(!boss.Block)
+                    {boss.Health -= magic.CastSpell(player);}
+                    else
+                    {
+                        Console.WriteLine("Some of your magic was blocked!");
+                        boss.Health -= (magic.CastSpell(player)/2);
+                        Thread.Sleep(750);
+                    }
+                    break;
+                
+                default:
                     break;
                 }
         }
 
-        public void Boss(Player player,Boss boss, Display display)
+        public void Boss(Player player,Boss boss, Display display, Magic magic)
         {
             Random num = new Random();
             int action = num.Next(3);
@@ -45,11 +59,11 @@ namespace FinalBattle
             {
                 case 1:
                     if(!player.Block)
-                    {player.Health -= boss.Attack();}
+                    {player.Health -= boss.BossAttack();}
                     else
                     {
                         Console.WriteLine("You blocked their attack!");
-                        Thread.Sleep(1000);
+                        Thread.Sleep(750);
                     }
                     break;
                 case 2:
@@ -58,6 +72,15 @@ namespace FinalBattle
                     break;
 
                 case 3:
+                    if(!player.Block)
+                    {player.Health -= magic.DragonClaw(player);}
+                    else
+                    {
+                        Console.WriteLine("You blocked some of their attack!");
+                        player.Health -= (magic.DragonClaw(player)/2);
+                        Thread.Sleep(750);
+                    }
+
                     break;
            }
 

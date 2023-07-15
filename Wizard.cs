@@ -4,15 +4,12 @@ namespace FinalBattle
     {
         public override void SetStats()
         {
+            this.Attack = 5;
             this.Health = 25;
             this.Mana = 50;
             this.ManaRegen = 5;
             this.ManaTotal = 50;
             this.Class = "Wizard";
-        }
-        override public int Attack()
-        {
-            return 3;
         }
     }
 }

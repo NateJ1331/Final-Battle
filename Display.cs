@@ -71,14 +71,14 @@ namespace FinalBattle
 
         public void BattleScreen(Boss boss, Player player)
         {
-            
             Console.WriteLine("\n=========================================================");
+            Console.WriteLine("\n");
             this.Health(boss.Health);
             Console.WriteLine("\n");
             this.Boss();
             Console.WriteLine("\n=========================================================");
             Console.WriteLine(player.Class);
-            Console.Write("\nMana: ");
+            Console.Write("Mana: ");
             this.Mana(player.Mana);                  
             Console.Write("\nHealth: ");
             this.Health(player.Health);
@@ -87,13 +87,36 @@ namespace FinalBattle
             Console.WriteLine("\n\n1.Attack     2.Block     3.Magic\n");
         }
 
+        public void WinScreen()
+        {
+            Console.Clear();
+            Console.WriteLine("____    ____  ______    __    __     ____    __    ____  __  .__   __.     __  ");  
+            Console.WriteLine("\\   \\  /   / /  __  \\  |  |  |  |    \\   \\  /  \\  /   / |  | |  \\ |  |    |  | ");
+            Console.WriteLine(" \\   \\/   / |  |  |  | |  |  |  |     \\   \\/    \\/   /  |  | |   \\|  |    |  | ");
+            Console.WriteLine("  \\_    _/  |  |  |  | |  |  |  |      \\            /   |  | |  . `  |    |  | ");
+            Console.WriteLine("    |  |    |  `--'  | |  `--'  |       \\    /\\    /    |  | |  |\\   |    |__| ");
+            Console.WriteLine("    |__|     \\______/   \\______/         \\__/  \\__/     |__| |__| \\__|    (__) ");
+            Thread.Sleep(3000);
+        }
 
+        public void LoseScreen()
+        {
+            Console.Clear();
+            Console.WriteLine("____    ____  ______    __    __      __        ______        _______. _______     __ ");
+            Console.WriteLine("\\   \\  /   / /  __  \\  |  |  |  |    |  |      /  __  \\      /       ||   ____|   |  | ");
+            Console.WriteLine(" \\   \\/   / |  |  |  | |  |  |  |    |  |     |  |  |  |    |   (----`|  |__      |  | ");
+            Console.WriteLine("  \\_    _/  |  |  |  | |  |  |  |    |  |     |  |  |  |     \\   \\    |   __|     |  | ");
+            Console.WriteLine("    |  |    |  `--'  | |  `--'  |    |  `----.|  `--'  | .----)   |   |  |____    |__| ");
+            Console.WriteLine("    |__|     \\______/   \\______/     |_______| \\______/  |_______/    |_______|   (__)");
+            Thread.Sleep(3000);
+        }
         public void Credits()
         {
             Console.Clear();
             Console.WriteLine("All the coding and making it work: Nate J");
             Console.WriteLine("Boss Acii art: John VanderZwaag(www.asciiart.eu)");
-            Thread.Sleep(5000);
+            Console.Write("\nHit enter to continue:");
+            Console.ReadLine();
         }
         
     }

@@ -2,12 +2,11 @@ namespace FinalBattle
 {
      class Player:Game
     {
+        
         private int _mana;
         private int _manatotal;
-
         private int _manaregen;
         private string _class;
-
         public virtual void SetStats(){}
 
         public int Mana
@@ -43,10 +42,6 @@ namespace FinalBattle
             {
                 _class = value;
             }
-        }
-        override public int Attack()
-        {
-            return 0;
         }
     }
 }

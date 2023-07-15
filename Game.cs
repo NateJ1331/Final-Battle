@@ -1,11 +1,19 @@
 namespace FinalBattle
 {
-    abstract class Game
+    class Game
     {
         public int _health;
         private bool _block;
-        abstract public int Attack();
+        private int _attack;
 
+        public int Attack
+        {
+            get {return _attack;}
+            set 
+            {
+                _attack = value;
+            }
+        }
         
         public int Health
         {
