@@ -43,7 +43,7 @@ namespace FinalBattle
 
         public int Rage(Player player)
         {   
-            if(player.Mana < 15)
+            if(player.Mana < 10)
             {
                 Console.WriteLine("You dont have enough mana!");
                 Thread.Sleep(750);
@@ -52,17 +52,17 @@ namespace FinalBattle
             
             else
             {
-                Console.WriteLine("You Become enraged!");
+                Console.WriteLine("SUPER PUNCH!!");
                 Thread.Sleep(750);
-                player.Mana -= 18;
-                return 10;
+                player.Mana -= 10;
+                return player.Attack() + 5;
             }
                
         }
 
-        public int CastSpell(string pClass, Player player)
+        public int CastSpell(Player player)
         {
-            switch(pClass)
+            switch(player.Class)
             {
                 case "Paladin":
                     return this.HolySlash(player);

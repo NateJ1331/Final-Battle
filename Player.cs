@@ -5,9 +5,10 @@ namespace FinalBattle
         private int _mana;
         private int _manatotal;
 
-        public virtual void SetStats(){}
-
+        private int _manaregen;
         private string _class;
+
+        public virtual void SetStats(){}
 
         public int Mana
         {
@@ -15,6 +16,15 @@ namespace FinalBattle
             set 
             {
                 _mana = value;
+            }
+        }
+
+        public int ManaRegen
+        {
+            get {return _manaregen;}
+            set 
+            {
+                _manaregen = value;
             }
         }
 

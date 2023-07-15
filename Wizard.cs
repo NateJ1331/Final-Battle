@@ -6,6 +6,7 @@ namespace FinalBattle
         {
             this.Health = 25;
             this.Mana = 50;
+            this.ManaRegen = 5;
             this.ManaTotal = 50;
             this.Class = "Wizard";
         }

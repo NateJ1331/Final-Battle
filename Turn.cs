@@ -11,7 +11,7 @@ namespace FinalBattle
             player.Block = false;
             
             if(player.Mana < player.ManaTotal)
-            {player.Mana += 2;}
+            {player.Mana += player.ManaRegen;}
 
             switch(choice)
             {
@@ -31,7 +31,7 @@ namespace FinalBattle
                     break;
 
                 case 3:
-                    boss.Health -= magic.CastSpell(player.Class,player);
+                    boss.Health -= magic.CastSpell(player);
                     break;
                 }
         }

@@ -6,8 +6,9 @@ namespace FinalBattle
         {
             this.Health = 50;
             this.Mana = 20;
+            this.ManaRegen = 1;
             this.ManaTotal = 20;
-            this.Class = "Barbarin";
+            this.Class = "Barbarian";
         }
         override public int Attack()
         {
