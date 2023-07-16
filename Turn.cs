@@ -6,8 +6,7 @@ namespace FinalBattle
         {
             display.BattleScreen(boss,player);
 
-            string option = Console.ReadLine();
-            int choice = Convert.ToInt32(option);
+            string choice = Console.ReadLine();
             player.Block = false;
             
             if(player.Mana < 0)
@@ -19,7 +18,7 @@ namespace FinalBattle
 
             switch(choice)
             {
-                case 1:
+                case "1":
                     if(!boss.Block)
                     {
                         boss.Health -= player.Attack;
@@ -33,12 +32,12 @@ namespace FinalBattle
                     }
                     break;
 
-                case 2:
+                case "2":
                     player.Block = true;    
                     
                     break;
 
-                case 3:
+                case "3":
                     if(!boss.Block)
                     {
                         boss.Health -= magic.CastSpell(player);
