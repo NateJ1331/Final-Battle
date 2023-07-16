@@ -57,7 +57,6 @@ namespace FinalBattle
                                 break;
                             }
                         }
-
                     break;
 
                     case "2":
