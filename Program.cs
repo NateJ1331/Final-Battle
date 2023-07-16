@@ -11,7 +11,7 @@ namespace FinalBattle
             Turn turn = new Turn();
             Player player = new Player();
             
-            boss.Health = 80;
+            
             string quit = "no";
 
             while(quit != "yes")
@@ -19,7 +19,7 @@ namespace FinalBattle
                 Console.Clear();
                 display.MainMenu();
                 string choice = Console.ReadLine();
-                
+                boss.Health = 80;
                 switch(choice)
                 {
                     case "1":

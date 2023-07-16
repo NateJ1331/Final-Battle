@@ -71,8 +71,6 @@ namespace FinalBattle
 
         public void BattleScreen(Boss boss, Player player)
         {
-            Console.WriteLine("\n=========================================================");
-            Console.WriteLine("\n");
             this.Health(boss.Health);
             Console.WriteLine("\n");
             this.Boss();

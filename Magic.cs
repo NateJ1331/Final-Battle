@@ -40,7 +40,7 @@ namespace FinalBattle
             
             else
             {
-                Console.WriteLine("Divine Smite");
+                Console.WriteLine("Divine Smite!");
                 Thread.Sleep(750);
                 player.Mana -= 12;
                 return 8;
@@ -59,7 +59,7 @@ namespace FinalBattle
             
             else
             {
-                Console.WriteLine("You attack Recklessly");
+                Console.WriteLine("You attack Recklessly!");
                 Thread.Sleep(750);
                 player.Mana -= 13;
                 player.Health -= 3;

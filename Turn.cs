@@ -21,7 +21,11 @@ namespace FinalBattle
             {
                 case 1:
                     if(!boss.Block)
-                    {boss.Health -= player.Attack;}
+                    {
+                        boss.Health -= player.Attack;
+                        Console.WriteLine("You hit your attack!");
+                        Thread.Sleep(750);
+                    }
                     else
                     {
                         Console.WriteLine("Your attaked was blocked!");
@@ -36,7 +40,9 @@ namespace FinalBattle
 
                 case 3:
                     if(!boss.Block)
-                    {boss.Health -= magic.CastSpell(player);}
+                    {
+                        boss.Health -= magic.CastSpell(player);
+                    }
                     else
                     {
                         Console.WriteLine("Some of your magic was blocked!");
@@ -60,7 +66,11 @@ namespace FinalBattle
             {
                 case 1:
                     if(!player.Block)
-                    {player.Health -= boss.BossAttack();}
+                    {
+                        player.Health -= boss.BossAttack();
+                        Console.WriteLine("You were attacked!");
+                        Thread.Sleep(750);
+                    }
                     else
                     {
                         Console.WriteLine("You blocked their attack!");
