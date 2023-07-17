@@ -2,7 +2,6 @@ namespace FinalBattle
 {
      class Player:Game
     {
-        
         private int _mana;
         private int _manatotal;
         private int _manaregen;

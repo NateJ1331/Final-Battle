@@ -7,7 +7,7 @@ namespace FinalBattle
         {
             Console.WriteLine("Dragon Claw!");
             Thread.Sleep(750);
-            return 16;
+            return 12;
         }
 
         public int Fireball(Player player)
